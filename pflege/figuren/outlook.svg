@@ -1,0 +1,33 @@
+<svg class="fig fig-outlook" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <!-- Konstruktionslinien -->
+  <path class="k" d="M10 205H250M216 14V104M176 59H256"/>
+  <!-- Vier Szenariotafeln im Szenariokreuz -->
+  <rect x="180" y="20" width="32" height="34" rx="2"/>
+  <rect x="220" y="20" width="32" height="34" rx="2"/>
+  <rect x="180" y="64" width="32" height="34" rx="2"/>
+  <rect x="220" y="64" width="32" height="34" rx="2"/>
+  <path d="M185 46L193 38L199 43L207 33M226 46H246M226 40H240M185 90C192 80 200 92 207 82"/>
+  <circle class="of" cx="236" cy="81" r="3"/>
+  <path d="M228 90H244"/>
+  <!-- Zeichentisch mit Einflussmatrix -->
+  <g transform="rotate(-9 118 128)">
+    <rect x="66" y="108" width="104" height="44" rx="2"/>
+    <path class="d" d="M92 108V152M118 108V152M144 108V152M66 123H170M66 137H170"/>
+    <rect class="of mx" x="93" y="109" width="24" height="13"/>
+    <rect class="of mx m2" x="145" y="124" width="24" height="12"/>
+    <rect class="of mx m3" x="119" y="138" width="24" height="13"/>
+  </g>
+  <path d="M84 156L74 205M156 142L166 205M78 182L163 176"/>
+  <!-- Verbindung Tisch → Tafeln -->
+  <path class="k o" d="M168 112L180 96"/>
+  <!-- Bemaßung Szenariokreuz -->
+  <path class="d" d="M180 112H252M180 108V116M252 108V116"/>
+  <!-- Agent mit Stift -->
+  <rect x="24" y="104" width="20" height="16" rx="4"/>
+  <path d="M34 104V95"/>
+  <circle cx="34" cy="93" r="2.2"/>
+  <circle class="of" cx="39" cy="111" r="2.2"/>
+  <path d="M25 124h18v34h-18zM29 158L27 205M39 158L41 205"/>
+  <path d="M43 132L66 126"/>
+  <path class="o" d="M66 126L74 122"/>
+</svg>

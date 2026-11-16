@@ -1,0 +1,32 @@
+<svg class="fig fig-scout" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <!-- Konstruktionslinien -->
+  <path class="k" d="M10 205H250M110 18V205"/>
+  <!-- Ausguck: Beine, Streben, Plattform, Geländer -->
+  <path d="M70 205L95 96M150 205L125 96M78 170H142M86 135H134M78 170L134 135M142 170L86 135"/>
+  <path d="M84 96H136V88H84Z"/>
+  <path d="M86 88V72M134 88V72M86 74H134"/>
+  <!-- Agent -->
+  <path d="M101 60h18v26h-18z"/>
+  <rect x="100" y="40" width="20" height="16" rx="4"/>
+  <path d="M110 40V31"/>
+  <circle cx="110" cy="29" r="2.2"/>
+  <circle class="of" cx="115" cy="47" r="2.2"/>
+  <path d="M118 66L132 52"/>
+  <!-- Fernrohr -->
+  <path d="M120 49L156 33L159 39L123 54Z"/>
+  <path d="M156 33L163 30L166 37L159 39"/>
+  <!-- Suchfeld: Sektor vor dem Fernrohr -->
+  <path class="k" d="M166 34L246 4M166 36L240 104M246 4A120 120 0 0 1 240 104"/>
+  <!-- Bemaßung Turmhöhe -->
+  <path class="d" d="M52 96V205M48 96H56M48 205H56"/>
+  <!-- Horizont -->
+  <path class="d" d="M170 205C182 192 194 190 206 196S228 186 250 194"/>
+  <!-- Sichtlinien und Signale -->
+  <path class="k o" d="M166 34L204 30M166 36L229 62M166 35L186 74"/>
+  <circle class="of puls" cx="204" cy="30" r="3.2"/>
+  <circle class="o ring" cx="204" cy="30" r="9"/>
+  <circle class="of puls p2" cx="229" cy="62" r="2.6"/>
+  <circle class="of puls p3" cx="186" cy="74" r="2.2"/>
+  <circle class="of puls p4" cx="236" cy="22" r="1.8"/>
+  <circle class="of puls p2" cx="214" cy="92" r="1.6"/>
+</svg>
