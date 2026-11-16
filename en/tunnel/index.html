@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tunnel: testing strategy in a wind tunnel with AI agents</title>
+    <meta name="description" content="Strategic fit: the Tunnel agent tests a strategy against every scenario, shows robustness and gaps and derives early-warning indicators.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentic-foresight.com/en/tunnel/">
+    <link rel="alternate" hreflang="de" href="https://agentic-foresight.com/tunnel/">
+    <link rel="alternate" hreflang="en" href="https://agentic-foresight.com/en/tunnel/">
+    <link rel="alternate" hreflang="x-default" href="https://agentic-foresight.com/tunnel/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Agentic Foresight">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:url" content="https://agentic-foresight.com/en/tunnel/">
+    <meta property="og:title" content="Tunnel: testing strategy in a wind tunnel with AI agents">
+    <meta property="og:description" content="Strategic fit: the Tunnel agent tests a strategy against every scenario, shows robustness and gaps and derives early-warning indicators.">
+    <meta property="og:image" content="https://agentic-foresight.com/img/og-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agentic Foresight: the agents Scout, Outlook and Tunnel as a construction sketch">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:modified_time" content="2026-11-16">
+    <meta property="article:author" content="https://pillkahn.de/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@Ulf_Pillkahn">
+    <meta name="twitter:title" content="Tunnel: testing strategy in a wind tunnel with AI agents">
+    <meta name="twitter:description" content="Strategic fit: the Tunnel agent tests a strategy against every scenario, shows robustness and gaps and derives early-warning indicators.">
+    <meta name="twitter:image" content="https://agentic-foresight.com/img/og-en.png">
+    <meta name="twitter:image:alt" content="Agentic Foresight: the agents Scout, Outlook and Tunnel as a construction sketch">
+    <meta name="theme-color" content="#141516">
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=2026-11-16">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Strukturdaten: generiert von pflege/seo.py nach dem Cluster-Standard -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pillkahn.de/#person",
+          "name": "Ulf Pillkahn",
+          "honorificPrefix": "Prof. Dr.",
+          "url": "https://pillkahn.de/",
+          "sameAs": [
+            "https://www.linkedin.com/in/prof-dr-ulf-pillkahn-1b7a6131/",
+            "https://x.com/Ulf_Pillkahn",
+            "https://www.youtube.com/@profandprompt"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://operation-zukunft.de/#organization",
+          "name": "Operation Zukunft",
+          "url": "https://operation-zukunft.de/",
+          "founder": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://agentic-foresight.com/#website",
+          "url": "https://agentic-foresight.com/",
+          "name": "Agentic Foresight",
+          "inLanguage": [
+            "de-DE",
+            "en"
+          ],
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://agentic-foresight.com/#term",
+          "name": "Agentic Foresight",
+          "description": "Agentic Foresight is foresight work in which specialised AI agents search for signals, build scenarios and test strategies against them. Humans ask the questions, judge and decide.",
+          "url": "https://agentic-foresight.com/en/",
+          "inLanguage": "en",
+          "creator": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "subjectOf": {
+            "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "name": "Flipped Foresight",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "sameAs": "https://doi.org/10.2139/ssrn.7322758",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://agentic-foresight.com/en/tunnel/#webpage",
+          "url": "https://agentic-foresight.com/en/tunnel/",
+          "name": "Tunnel: testing strategy in a wind tunnel with AI agents",
+          "description": "Strategic fit: the Tunnel agent tests a strategy against every scenario, shows robustness and gaps and derives early-warning indicators.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "breadcrumb": {
+            "@id": "https://agentic-foresight.com/en/tunnel/#breadcrumb"
+          },
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://agentic-foresight.com/en/tunnel/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://agentic-foresight.com/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tunnel",
+              "item": "https://agentic-foresight.com/en/tunnel/"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://agentic-foresight.com/en/tunnel/#article",
+          "headline": "What do the scenarios mean for your strategy?",
+          "description": "Strategic fit: the Tunnel agent tests a strategy against every scenario, shows robustness and gaps and derives early-warning indicators.",
+          "url": "https://agentic-foresight.com/en/tunnel/",
+          "mainEntityOfPage": {
+            "@id": "https://agentic-foresight.com/en/tunnel/#webpage"
+          },
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16",
+          "image": "https://agentic-foresight.com/img/og-en.png",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="sprungmarke" href="#inhalt">Skip to content</a>
+
+<!-- kopf -->
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="/en/">Agentic<b>·</b>Foresight</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/en/scout/">Scout</a>
+      <a href="/en/outlook/">Outlook</a>
+      <a href="/en/tunnel/" aria-current="page">Tunnel</a>
+      <a href="/en/faq/">FAQ</a>
+      <a class="sprache" href="/tunnel/" hreflang="de" lang="de" data-track="sprache-de">DE</a>
+    </nav>
+  </div>
+</header>
+<!-- /kopf -->
+
+<main id="inhalt">
+
+<section class="seite-auftakt">
+  <div class="huelle">
+    <div>
+      <p class="label">Lever 03 · Tunnel</p>
+      <h1>What do the scenarios mean <span>for your strategy</span>?</h1>
+      <p class="antwort">A Tunnel agent tests your strategy against every scenario, like a model in a wind tunnel, and shows where it holds and where it breaks. From that it derives actions and early-warning indicators; judging, prioritising and deciding remain human tasks.</p>
+    </div>
+    <figure class="blatt">
+      <!-- figur:tunnel:seite -->
+<picture>
+  <source type="image/avif" srcset="/img/tunnel-560.avif 560w, /img/tunnel-760.avif 760w, /img/tunnel.avif 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <source type="image/webp" srcset="/img/tunnel-560.webp 560w, /img/tunnel-760.webp 760w, /img/tunnel.webp 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <img src="/img/tunnel.webp" alt="Sketch: a wind tunnel with a glowing orange fan. The flow passes a stepped strategy model and turns turbulent behind it; a robot takes notes." width="1000" height="806" fetchpriority="high" decoding="async">
+</picture>
+<!-- /figur -->
+    </figure>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">01 / Process</p>
+    <h2>From scenario to decision in five steps</h2>
+    <ol class="schritte">
+      <li><div><b>Model the strategy</b><p>Business model, resources, dependencies and the assumptions the strategy rests on are written down explicitly and in a testable form.</p></div></li>
+      <li><div><b>Run each scenario</b><p>The agent plays the strategy through in every scenario: which assumption holds, which does not, where do bottlenecks or new opportunities appear?</p></div></li>
+      <li><div><b>Show robustness and gaps</b><p>Strategic fit is set out scenario by scenario. Robust is what holds in every world; critical is what only works in one.</p></div></li>
+      <li><div><b>Derive actions</b><p>Three kinds of response: prepare for what every scenario requires; hedge where an assumption breaks; create options that can be exercised once a scenario starts to unfold.</p></div></li>
+      <li><div><b>Set early-warning indicators</b><p>For each scenario, indicators are defined that show early on which direction the world is moving in. They go back to Scout and are monitored continuously.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">02 / Division of labour</p>
+    <h2>What the agent does, what humans decide</h2>
+    <div class="tabelle-huelle" role="region" aria-label="Division of labour, Tunnel" tabindex="0">
+      <table class="rollen">
+        <thead><tr><th scope="col">Step</th><th scope="col">The agent</th><th scope="col" class="mensch">Humans decide</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Strategy model</th><td>structures documents, phrases assumptions so they can be tested</td><td class="mensch">confirm that the model reflects the strategy correctly</td></tr>
+          <tr><th scope="row">Runs</th><td>checks the strategy against each scenario</td><td class="mensch">review the reasoning at the breaking points</td></tr>
+          <tr><th scope="row">Robustness</th><td>sets fit, gaps and critical assumptions side by side</td><td class="mensch">judge which gaps matter</td></tr>
+          <tr><th scope="row">Actions</th><td>proposes prepare, hedge and option moves</td><td class="mensch">prioritise and decide</td></tr>
+          <tr><th scope="row">Early warning</th><td>derives indicators and monitors them</td><td class="mensch">set the threshold at which an indicator triggers action</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">03 / Limits</p>
+    <h2>What Tunnel cannot do</h2>
+    <ul class="liste">
+      <li>The model is not the company. Whatever is missing from the strategy model, such as culture, relationships or tacit knowledge, is not tested either.</li>
+      <li>The test is only as good as the scenarios. If all scenarios sit too close together, every strategy looks robust.</li>
+      <li>The agent provides reasoning, not certainty. A measured breaking point is a reason to look closer, not a verdict.</li>
+      <li>It cannot decide or take responsibility. Weighing risk, opportunity and resources stays with humans.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">04 / In practice</p>
+    <h2>What this looks like in practice</h2>
+    <div class="werkzeug">
+      <p>Strategy Review exposes a company to artificially generated future worlds and measures where it holds and where it breaks. The result is a decision paper with implications for each future world, assessed options, breaking points and early indicators.</p>
+      <p><a href="https://strategy-review.com/">Have your strategy tested in the wind tunnel</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="sektion">
+  <div class="huelle">
+    <div class="aufruf-knapp">
+      <p>Strategy testing with your own agents: Operation Zukunft builds and runs AI agents for innovation and foresight.</p>
+      <a class="knopf" href="https://operation-zukunft.de/#angebote" data-track="cta-angebot">Build agents for your foresight work →</a>
+    </div>
+    <nav class="weiterblaettern" aria-label="Other levers">
+      <a href="/en/outlook/" data-track="hebel-outlook">← Back: Outlook builds scenarios</a>
+      <a href="/en/faq/">Next: FAQ and glossary →</a>
+    </nav>
+    <p class="stand">Published: 16 November 2026 · Last updated: 16 November 2026</p>
+  </div>
+</div>
+
+</main>
+
+<!-- fuss -->
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-zeile">
+      <div class="fuss-links">
+        <p class="cluster-hinweis">A project by <a href="https://pillkahn.de/">Prof. Dr. Ulf Pillkahn</a></p>
+        <a href="/en/privacy/" data-track="datenschutz">Privacy</a>
+      </div>
+      <button class="impressum-toggle" type="button" aria-expanded="false" aria-controls="impressum" data-text="Legal notice">Legal notice ▼</button>
+    </div>
+    <div id="impressum" class="impressum">
+      <h2>Legal notice</h2>
+      <p><strong>Information pursuant to § 5 DDG (German Digital Services Act)</strong></p>
+      <p>Prof. Dr. Ulf Pillkahn<br>Maxhofstraße 28<br>81475 München<br>Germany</p>
+      <p><strong>Contact:</strong> <a href="mailto:info@operation-zukunft.de">info@operation-zukunft.de</a></p>
+      <p><strong>Responsible for content pursuant to § 18 (2) MStV:</strong><br>Prof. Dr. Ulf Pillkahn</p>
+      <p><strong>Disclaimer:</strong> The content of these pages has been prepared with great care. No guarantee can be given, however, for its accuracy, completeness or timeliness. As a service provider, Prof. Dr. Ulf Pillkahn is responsible for his own content on these pages under general law in accordance with § 7 (1) DDG, but under §§ 8 to 10 DDG is not obliged to monitor transmitted or stored third-party information or to investigate circumstances indicating illegal activity. The operators of linked external sites are solely responsible for their content. The German version of this legal notice is authoritative.</p>
+    </div>
+    <p class="copy">© 2026 Prof. Dr. Ulf Pillkahn · Operation Zukunft</p>
+  </div>
+</footer>
+<!-- /fuss -->
+
+<script src="/js/main.js?v=2026-11-16" defer></script>
+<script src="/js/track.js?v=2026-11-16" defer></script>
+</body>
+</html>

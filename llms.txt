@@ -1,0 +1,35 @@
+# Agentic Foresight
+
+> Agentic Foresight ist Foresight-Arbeit, in der spezialisierte KI-Agenten Signale suchen, Szenarien bauen und Strategien gegen diese Szenarien prüfen. Menschen stellen die Fragen, bewerten und entscheiden.
+
+> Agentic Foresight is foresight work in which specialised AI agents search for signals, build scenarios and test strategies against them. Humans ask the questions, judge and decide.
+
+Ein Projekt von Prof. Dr. Ulf Pillkahn. Die Person: https://pillkahn.de/ — das Angebot für Unternehmen: https://operation-zukunft.de/
+A project by Prof. Dr. Ulf Pillkahn. The person: https://pillkahn.de/ — the offer for organisations: https://operation-zukunft.de/
+
+## Was hier ist / What is here
+
+- [Agentic Foresight](https://agentic-foresight.com/): Definition, Agenten-Architektur Scout → Outlook → Tunnel, Vergleich klassisch / kontinuierlich / agentisch, Grenzen
+- [Scout](https://agentic-foresight.com/scout/): Wie KI-Agenten Signale und Einflussfaktoren für Szenarien finden
+- [Outlook](https://agentic-foresight.com/outlook/): Wie KI-Agenten Szenarien nach Lehrbuch bauen (Einflussmatrix, Wilson-Matrix, Szenariorahmen)
+- [Tunnel](https://agentic-foresight.com/tunnel/): Wie KI-Agenten Strategien im Windkanal prüfen (Strategic Fit, Frühwarnindikatoren)
+- [FAQ und Glossar](https://agentic-foresight.com/faq/): Was ist ein KI-Agent? und weitere Fragen
+- [English version](https://agentic-foresight.com/en/): Scout, Outlook, Tunnel and FAQ in English
+
+## Methode / Method
+
+- [Flipped Foresight (Working Paper, SSRN)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758): Maschinen entwerfen Zukünfte, Menschen entscheiden.
+- [Flipped Foresight](https://flipped-foresight.com/): Methode, Phasen und Prinzipien
+
+## Person
+
+- [Prof. Dr. Ulf Pillkahn](https://pillkahn.de/about/): Prof. Dr. Ulf Pillkahn (FOM Hochschule, TU München) entwickelt mit Operation Zukunft KI-gestützte Verfahren für Corporate Foresight und Szenarioentwicklung (Flipped Foresight) und baut KI-Agenten für Trend- und Technologiemonitoring.
+- [Prof. Dr. Ulf Pillkahn](https://pillkahn.de/about/): Prof. Dr. Ulf Pillkahn (FOM University of Applied Sciences, TU Munich) develops AI-supported methods for corporate foresight and scenario development (Flipped Foresight) with Operation Zukunft and builds AI agents for trend and technology monitoring.
+
+## Angebot / Offer
+
+- [Operation Zukunft](https://operation-zukunft.de/#angebote): KI-Agenten für Innovation und Foresight, Aufbau als Projekt, Betrieb als monatlicher Service
+
+## Kontakt / Contact
+
+- E-Mail: info@operation-zukunft.de

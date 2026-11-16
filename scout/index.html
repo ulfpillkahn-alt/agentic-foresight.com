@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scout: Wie KI-Agenten Signale für Szenarien finden</title>
+    <meta name="description" content="Der Scout-Agent durchsucht ein Suchfeld, erfasst Signale mit Belegen und schlägt Einflussfaktoren vor. Was er übernimmt, was der Mensch entscheidet.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentic-foresight.com/scout/">
+    <link rel="alternate" hreflang="de" href="https://agentic-foresight.com/scout/">
+    <link rel="alternate" hreflang="en" href="https://agentic-foresight.com/en/scout/">
+    <link rel="alternate" hreflang="x-default" href="https://agentic-foresight.com/scout/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Agentic Foresight">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:url" content="https://agentic-foresight.com/scout/">
+    <meta property="og:title" content="Scout: Wie KI-Agenten Signale für Szenarien finden">
+    <meta property="og:description" content="Der Scout-Agent durchsucht ein Suchfeld, erfasst Signale mit Belegen und schlägt Einflussfaktoren vor. Was er übernimmt, was der Mensch entscheidet.">
+    <meta property="og:image" content="https://agentic-foresight.com/img/og-de.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agentic Foresight: die Agenten Scout, Outlook und Tunnel als Konstruktionsskizze">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:modified_time" content="2026-11-16">
+    <meta property="article:author" content="https://pillkahn.de/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@Ulf_Pillkahn">
+    <meta name="twitter:title" content="Scout: Wie KI-Agenten Signale für Szenarien finden">
+    <meta name="twitter:description" content="Der Scout-Agent durchsucht ein Suchfeld, erfasst Signale mit Belegen und schlägt Einflussfaktoren vor. Was er übernimmt, was der Mensch entscheidet.">
+    <meta name="twitter:image" content="https://agentic-foresight.com/img/og-de.png">
+    <meta name="twitter:image:alt" content="Agentic Foresight: die Agenten Scout, Outlook und Tunnel als Konstruktionsskizze">
+    <meta name="theme-color" content="#141516">
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=2026-11-16">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Strukturdaten: generiert von pflege/seo.py nach dem Cluster-Standard -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pillkahn.de/#person",
+          "name": "Ulf Pillkahn",
+          "honorificPrefix": "Prof. Dr.",
+          "url": "https://pillkahn.de/",
+          "sameAs": [
+            "https://www.linkedin.com/in/prof-dr-ulf-pillkahn-1b7a6131/",
+            "https://x.com/Ulf_Pillkahn",
+            "https://www.youtube.com/@profandprompt"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://operation-zukunft.de/#organization",
+          "name": "Operation Zukunft",
+          "url": "https://operation-zukunft.de/",
+          "founder": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://agentic-foresight.com/#website",
+          "url": "https://agentic-foresight.com/",
+          "name": "Agentic Foresight",
+          "inLanguage": [
+            "de-DE",
+            "en"
+          ],
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://agentic-foresight.com/#term",
+          "name": "Agentic Foresight",
+          "description": "Agentic Foresight ist Foresight-Arbeit, in der spezialisierte KI-Agenten Signale suchen, Szenarien bauen und Strategien gegen diese Szenarien prüfen. Menschen stellen die Fragen, bewerten und entscheiden.",
+          "url": "https://agentic-foresight.com/",
+          "inLanguage": "de-DE",
+          "creator": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "subjectOf": {
+            "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "name": "Flipped Foresight",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "sameAs": "https://doi.org/10.2139/ssrn.7322758",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://agentic-foresight.com/scout/#webpage",
+          "url": "https://agentic-foresight.com/scout/",
+          "name": "Scout: Wie KI-Agenten Signale für Szenarien finden",
+          "description": "Der Scout-Agent durchsucht ein Suchfeld, erfasst Signale mit Belegen und schlägt Einflussfaktoren vor. Was er übernimmt, was der Mensch entscheidet.",
+          "inLanguage": "de-DE",
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "breadcrumb": {
+            "@id": "https://agentic-foresight.com/scout/#breadcrumb"
+          },
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://agentic-foresight.com/scout/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://agentic-foresight.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Scout",
+              "item": "https://agentic-foresight.com/scout/"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://agentic-foresight.com/scout/#article",
+          "headline": "Wie finden Agenten Signale und Einflussfaktoren für Szenarien?",
+          "description": "Der Scout-Agent durchsucht ein Suchfeld, erfasst Signale mit Belegen und schlägt Einflussfaktoren vor. Was er übernimmt, was der Mensch entscheidet.",
+          "url": "https://agentic-foresight.com/scout/",
+          "mainEntityOfPage": {
+            "@id": "https://agentic-foresight.com/scout/#webpage"
+          },
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "inLanguage": "de-DE",
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16",
+          "image": "https://agentic-foresight.com/img/og-de.png",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- kopf -->
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="/">Agentic<b>·</b>Foresight</a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/scout/" aria-current="page">Scout</a>
+      <a href="/outlook/">Outlook</a>
+      <a href="/tunnel/">Tunnel</a>
+      <a href="/faq/">FAQ</a>
+      <a class="sprache" href="/en/scout/" hreflang="en" lang="en" data-track="sprache-en">EN</a>
+    </nav>
+  </div>
+</header>
+<!-- /kopf -->
+
+<main id="inhalt">
+
+<section class="seite-auftakt">
+  <div class="huelle">
+    <div>
+      <p class="label">Hebel 01 · Scout</p>
+      <h1>Wie finden Agenten <span>Signale und Einflussfaktoren</span> für Szenarien?</h1>
+      <p class="antwort">Ein Scout-Agent durchsucht ein vom Menschen festgelegtes Suchfeld fortlaufend nach Signalen, erfasst jedes mit seinem Beleg und bündelt verwandte Signale zu Themen. Aus den Themen schlägt er Kandidaten für Einflussfaktoren vor, ausgewählt werden sie vom Menschen.</p>
+    </div>
+    <figure class="blatt">
+      <!-- figur:scout:seite -->
+<picture>
+  <source type="image/avif" srcset="/img/scout-560.avif 560w, /img/scout-760.avif 760w, /img/scout.avif 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <source type="image/webp" srcset="/img/scout-560.webp 560w, /img/scout-760.webp 760w, /img/scout.webp 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <img src="/img/scout.webp" alt="Skizze: Ein kleiner Roboter steht auf einem Gitterturm und blickt durch ein Fernrohr in ein gestricheltes Suchfeld voller orangefarbener Signalpunkte." width="1000" height="806" fetchpriority="high" decoding="async">
+</picture>
+<!-- /figur -->
+    </figure>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">01 / Ablauf</p>
+    <h2>In fünf Schritten vom Suchfeld zum Einflussfaktor</h2>
+    <ol class="schritte">
+      <li><div><b>Suchfeld festlegen</b><p>Frage, Zeithorizont, Branche und Region bestimmen, welche Themenfelder beobachtet werden, etwa entlang der STEEP-Dimensionen Gesellschaft, Technologie, Wirtschaft, Umwelt und Politik.</p></div></li>
+      <li><div><b>Quellen scannen</b><p>Der Agent liest laufend Fachquellen, Behörden, Unternehmensmeldungen, Forschung und Presse im Suchfeld und sortiert Dubletten und Rauschen aus.</p></div></li>
+      <li><div><b>Signale erfassen</b><p>Jede relevante Beobachtung wird als Signal mit Quelle, Datum und Kurzbeschreibung festgehalten. Ohne Beleg gibt es kein Signal.</p></div></li>
+      <li><div><b>Signale clustern</b><p>Verwandte Signale werden zu Themen gebündelt. Ein Thema mit vielen, unabhängigen Belegen hat ein anderes Gewicht als ein einzelner Hinweis.</p></div></li>
+      <li><div><b>Einflussfaktoren vorschlagen</b><p>Aus den Themen formuliert der Agent Kandidaten für Einflussfaktoren: Größen, die die Zukunft im Suchfeld prägen, jeweils mit den Signalen, auf denen sie beruhen.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">02 / Arbeitsteilung</p>
+    <h2>Was der Agent übernimmt, was der Mensch entscheidet</h2>
+    <div class="tabelle-huelle" role="region" aria-label="Arbeitsteilung Scout" tabindex="0">
+      <table class="rollen">
+        <thead><tr><th scope="col">Schritt</th><th scope="col">Agent übernimmt</th><th scope="col" class="mensch">Mensch entscheidet</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Suchfeld</th><td>schlägt Themenfelder und Quellen vor</td><td class="mensch">legt Frage, Horizont und Grenzen des Suchfelds fest</td></tr>
+          <tr><th scope="row">Scannen</th><td>liest laufend, filtert Dubletten und Rauschen</td><td class="mensch">bestimmt, welche Quellen als verlässlich gelten</td></tr>
+          <tr><th scope="row">Signale</th><td>erfasst Beobachtungen mit Beleg</td><td class="mensch">prüft Stichproben und markiert Fehlgriffe</td></tr>
+          <tr><th scope="row">Cluster</th><td>bündelt Signale zu Themen</td><td class="mensch">benennt, trennt oder verwirft Themen</td></tr>
+          <tr><th scope="row">Einflussfaktoren</th><td>schlägt Kandidaten mit Belegen vor</td><td class="mensch">wählt die Faktoren aus, mit denen weitergearbeitet wird</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">03 / Grenzen</p>
+    <h2>Was der Scout nicht kann</h2>
+    <ul class="liste">
+      <li>Er findet nur, was Spuren hinterlässt. Entwicklungen, über die noch niemand schreibt, bleiben unsichtbar.</li>
+      <li>Er erbt die Schlagseite seiner Quellen. Ein Suchfeld aus wenigen Quellentypen liefert ein verzerrtes Bild.</li>
+      <li>Häufigkeit ist nicht Bedeutung. Ein oft gemeldetes Thema kann unwichtig sein, ein einzelnes Signal entscheidend.</li>
+      <li>Er beantwortet keine Frage, die niemand gestellt hat. Ohne gut gesetztes Suchfeld sammelt er Material ohne Richtung.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">04 / Im Ökosystem</p>
+    <h2>So sieht das in der Praxis aus</h2>
+    <div class="werkzeug">
+      <p>Squawk beobachtet laufend Technologie, Märkte, Politik, Umwelt und Gesellschaft, prüft jede Beobachtung gegen ihre Quelle und verdichtet sie zu einem Branchen-Radar mit Themen, Stufe und Verlauf, jede Woche per E-Mail und jeden Monat als Bericht.</p>
+      <p><a href="https://squawk.de/">Horizon Scanning und Trend Monitoring für die eigene Branche</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="sektion">
+  <div class="huelle">
+    <div class="aufruf-knapp">
+      <p>Einen Scout auf das eigene Suchfeld ansetzen: Operation Zukunft baut und betreibt KI-Agenten für Innovation und Foresight.</p>
+      <a class="knopf" href="https://operation-zukunft.de/#angebote" data-track="cta-angebot">Agenten für die Foresight-Arbeit aufbauen →</a>
+    </div>
+    <nav class="weiterblaettern" aria-label="Weitere Hebel">
+      <a href="/">← Agentic Foresight</a>
+      <a href="/outlook/" data-track="hebel-outlook">Weiter: Outlook baut Szenarien →</a>
+    </nav>
+    <p class="stand">Erstellt: 16.11.2026 · Zuletzt aktualisiert: 16.11.2026</p>
+  </div>
+</div>
+
+</main>
+
+<!-- fuss -->
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-zeile">
+      <div class="fuss-links">
+        <p class="cluster-hinweis">Ein Projekt von <a href="https://pillkahn.de/">Prof. Dr. Ulf Pillkahn</a></p>
+        <a href="/datenschutz/" data-track="datenschutz">Datenschutz</a>
+      </div>
+      <button class="impressum-toggle" type="button" aria-expanded="false" aria-controls="impressum" data-text="Impressum">Impressum ▼</button>
+    </div>
+    <div id="impressum" class="impressum">
+      <h2>Impressum</h2>
+      <p><strong>Angaben gemäß § 5 DDG</strong></p>
+      <p>Prof. Dr. Ulf Pillkahn<br>Maxhofstraße 28<br>81475 München</p>
+      <p><strong>Kontakt:</strong> <a href="mailto:info@operation-zukunft.de">info@operation-zukunft.de</a></p>
+      <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>Prof. Dr. Ulf Pillkahn</p>
+      <p><strong>Haftungsausschluss:</strong> Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter ist Prof. Dr. Ulf Pillkahn gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich, nach §§ 8 bis 10 DDG jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Für die Inhalte verlinkter externer Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+    </div>
+    <p class="copy">© 2026 Prof. Dr. Ulf Pillkahn · Operation Zukunft</p>
+  </div>
+</footer>
+<!-- /fuss -->
+
+<script src="/js/main.js?v=2026-11-16" defer></script>
+<script src="/js/track.js?v=2026-11-16" defer></script>
+</body>
+</html>

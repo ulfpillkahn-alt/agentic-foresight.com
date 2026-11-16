@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scout: how AI agents find signals for scenarios</title>
+    <meta name="description" content="The Scout agent scans a search field, records signals with evidence and proposes drivers. What the agent does and what humans decide.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentic-foresight.com/en/scout/">
+    <link rel="alternate" hreflang="de" href="https://agentic-foresight.com/scout/">
+    <link rel="alternate" hreflang="en" href="https://agentic-foresight.com/en/scout/">
+    <link rel="alternate" hreflang="x-default" href="https://agentic-foresight.com/scout/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Agentic Foresight">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:url" content="https://agentic-foresight.com/en/scout/">
+    <meta property="og:title" content="Scout: how AI agents find signals for scenarios">
+    <meta property="og:description" content="The Scout agent scans a search field, records signals with evidence and proposes drivers. What the agent does and what humans decide.">
+    <meta property="og:image" content="https://agentic-foresight.com/img/og-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agentic Foresight: the agents Scout, Outlook and Tunnel as a construction sketch">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:modified_time" content="2026-11-16">
+    <meta property="article:author" content="https://pillkahn.de/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@Ulf_Pillkahn">
+    <meta name="twitter:title" content="Scout: how AI agents find signals for scenarios">
+    <meta name="twitter:description" content="The Scout agent scans a search field, records signals with evidence and proposes drivers. What the agent does and what humans decide.">
+    <meta name="twitter:image" content="https://agentic-foresight.com/img/og-en.png">
+    <meta name="twitter:image:alt" content="Agentic Foresight: the agents Scout, Outlook and Tunnel as a construction sketch">
+    <meta name="theme-color" content="#141516">
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=2026-11-16">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Strukturdaten: generiert von pflege/seo.py nach dem Cluster-Standard -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pillkahn.de/#person",
+          "name": "Ulf Pillkahn",
+          "honorificPrefix": "Prof. Dr.",
+          "url": "https://pillkahn.de/",
+          "sameAs": [
+            "https://www.linkedin.com/in/prof-dr-ulf-pillkahn-1b7a6131/",
+            "https://x.com/Ulf_Pillkahn",
+            "https://www.youtube.com/@profandprompt"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://operation-zukunft.de/#organization",
+          "name": "Operation Zukunft",
+          "url": "https://operation-zukunft.de/",
+          "founder": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://agentic-foresight.com/#website",
+          "url": "https://agentic-foresight.com/",
+          "name": "Agentic Foresight",
+          "inLanguage": [
+            "de-DE",
+            "en"
+          ],
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://agentic-foresight.com/#term",
+          "name": "Agentic Foresight",
+          "description": "Agentic Foresight is foresight work in which specialised AI agents search for signals, build scenarios and test strategies against them. Humans ask the questions, judge and decide.",
+          "url": "https://agentic-foresight.com/en/",
+          "inLanguage": "en",
+          "creator": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "subjectOf": {
+            "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "name": "Flipped Foresight",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "sameAs": "https://doi.org/10.2139/ssrn.7322758",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://agentic-foresight.com/en/scout/#webpage",
+          "url": "https://agentic-foresight.com/en/scout/",
+          "name": "Scout: how AI agents find signals for scenarios",
+          "description": "The Scout agent scans a search field, records signals with evidence and proposes drivers. What the agent does and what humans decide.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "breadcrumb": {
+            "@id": "https://agentic-foresight.com/en/scout/#breadcrumb"
+          },
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://agentic-foresight.com/en/scout/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://agentic-foresight.com/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Scout",
+              "item": "https://agentic-foresight.com/en/scout/"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://agentic-foresight.com/en/scout/#article",
+          "headline": "How do agents find signals and drivers for scenarios?",
+          "description": "The Scout agent scans a search field, records signals with evidence and proposes drivers. What the agent does and what humans decide.",
+          "url": "https://agentic-foresight.com/en/scout/",
+          "mainEntityOfPage": {
+            "@id": "https://agentic-foresight.com/en/scout/#webpage"
+          },
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16",
+          "image": "https://agentic-foresight.com/img/og-en.png",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="sprungmarke" href="#inhalt">Skip to content</a>
+
+<!-- kopf -->
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="/en/">Agentic<b>·</b>Foresight</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/en/scout/" aria-current="page">Scout</a>
+      <a href="/en/outlook/">Outlook</a>
+      <a href="/en/tunnel/">Tunnel</a>
+      <a href="/en/faq/">FAQ</a>
+      <a class="sprache" href="/scout/" hreflang="de" lang="de" data-track="sprache-de">DE</a>
+    </nav>
+  </div>
+</header>
+<!-- /kopf -->
+
+<main id="inhalt">
+
+<section class="seite-auftakt">
+  <div class="huelle">
+    <div>
+      <p class="label">Lever 01 · Scout</p>
+      <h1>How do agents find <span>signals and drivers</span> for scenarios?</h1>
+      <p class="antwort">A Scout agent continuously searches a search field defined by humans for signals, records each one with its evidence and groups related signals into themes. From those themes it proposes candidate drivers; humans make the final selection.</p>
+    </div>
+    <figure class="blatt">
+      <!-- figur:scout:seite -->
+<picture>
+  <source type="image/avif" srcset="/img/scout-560.avif 560w, /img/scout-760.avif 760w, /img/scout.avif 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <source type="image/webp" srcset="/img/scout-560.webp 560w, /img/scout-760.webp 760w, /img/scout.webp 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <img src="/img/scout.webp" alt="Sketch: a small robot on a lattice tower looks through a telescope into a dashed search field full of orange signal dots." width="1000" height="806" fetchpriority="high" decoding="async">
+</picture>
+<!-- /figur -->
+    </figure>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">01 / Process</p>
+    <h2>From search field to driver in five steps</h2>
+    <ol class="schritte">
+      <li><div><b>Define the search field</b><p>Question, time horizon, industry and region determine which fields are scanned, for example along the STEEP dimensions: society, technology, economy, environment and politics.</p></div></li>
+      <li><div><b>Scan sources</b><p>The agent continuously reads specialist sources, public authorities, company announcements, research and the press within the search field, and filters out duplicates and noise.</p></div></li>
+      <li><div><b>Record signals</b><p>Every relevant observation is recorded as a signal with its source, date and a short description. No evidence, no signal.</p></div></li>
+      <li><div><b>Cluster signals</b><p>Related signals are grouped into themes. A theme backed by many independent sources carries different weight from a single hint.</p></div></li>
+      <li><div><b>Propose drivers</b><p>From the themes, the agent drafts candidate drivers: factors that will shape the future within the search field, each linked to the signals it rests on.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">02 / Division of labour</p>
+    <h2>What the agent does, what humans decide</h2>
+    <div class="tabelle-huelle" role="region" aria-label="Division of labour, Scout" tabindex="0">
+      <table class="rollen">
+        <thead><tr><th scope="col">Step</th><th scope="col">The agent</th><th scope="col" class="mensch">Humans decide</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Search field</th><td>suggests fields and sources</td><td class="mensch">set the question, horizon and boundaries of the search field</td></tr>
+          <tr><th scope="row">Scanning</th><td>reads continuously, removes duplicates and noise</td><td class="mensch">decide which sources count as reliable</td></tr>
+          <tr><th scope="row">Signals</th><td>records observations with evidence</td><td class="mensch">spot-check and flag mistakes</td></tr>
+          <tr><th scope="row">Clusters</th><td>groups signals into themes</td><td class="mensch">name, split or discard themes</td></tr>
+          <tr><th scope="row">Drivers</th><td>proposes candidates with evidence</td><td class="mensch">choose the drivers to work with</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">03 / Limits</p>
+    <h2>What Scout cannot do</h2>
+    <ul class="liste">
+      <li>It only finds what leaves traces. Developments nobody is writing about yet remain invisible.</li>
+      <li>It inherits the bias of its sources. A search field built on a few types of source gives a distorted picture.</li>
+      <li>Frequency is not significance. A widely reported theme can be unimportant, a single signal decisive.</li>
+      <li>It does not answer questions nobody has asked. Without a well-defined search field it gathers material without direction.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">04 / In practice</p>
+    <h2>What this looks like in practice</h2>
+    <div class="werkzeug">
+      <p>Squawk continuously monitors technology, markets, politics, the environment and society, checks every observation against its source and condenses the results into an industry radar of themes with stage and trajectory, delivered weekly by email and monthly as a report (in German).</p>
+      <p><a href="https://squawk.de/">Horizon scanning and trend monitoring for your industry</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="sektion">
+  <div class="huelle">
+    <div class="aufruf-knapp">
+      <p>Point a Scout at your own search field: Operation Zukunft builds and runs AI agents for innovation and foresight.</p>
+      <a class="knopf" href="https://operation-zukunft.de/#angebote" data-track="cta-angebot">Build agents for your foresight work →</a>
+    </div>
+    <nav class="weiterblaettern" aria-label="Other levers">
+      <a href="/en/">← Agentic Foresight</a>
+      <a href="/en/outlook/" data-track="hebel-outlook">Next: Outlook builds scenarios →</a>
+    </nav>
+    <p class="stand">Published: 16 November 2026 · Last updated: 16 November 2026</p>
+  </div>
+</div>
+
+</main>
+
+<!-- fuss -->
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-zeile">
+      <div class="fuss-links">
+        <p class="cluster-hinweis">A project by <a href="https://pillkahn.de/">Prof. Dr. Ulf Pillkahn</a></p>
+        <a href="/en/privacy/" data-track="datenschutz">Privacy</a>
+      </div>
+      <button class="impressum-toggle" type="button" aria-expanded="false" aria-controls="impressum" data-text="Legal notice">Legal notice ▼</button>
+    </div>
+    <div id="impressum" class="impressum">
+      <h2>Legal notice</h2>
+      <p><strong>Information pursuant to § 5 DDG (German Digital Services Act)</strong></p>
+      <p>Prof. Dr. Ulf Pillkahn<br>Maxhofstraße 28<br>81475 München<br>Germany</p>
+      <p><strong>Contact:</strong> <a href="mailto:info@operation-zukunft.de">info@operation-zukunft.de</a></p>
+      <p><strong>Responsible for content pursuant to § 18 (2) MStV:</strong><br>Prof. Dr. Ulf Pillkahn</p>
+      <p><strong>Disclaimer:</strong> The content of these pages has been prepared with great care. No guarantee can be given, however, for its accuracy, completeness or timeliness. As a service provider, Prof. Dr. Ulf Pillkahn is responsible for his own content on these pages under general law in accordance with § 7 (1) DDG, but under §§ 8 to 10 DDG is not obliged to monitor transmitted or stored third-party information or to investigate circumstances indicating illegal activity. The operators of linked external sites are solely responsible for their content. The German version of this legal notice is authoritative.</p>
+    </div>
+    <p class="copy">© 2026 Prof. Dr. Ulf Pillkahn · Operation Zukunft</p>
+  </div>
+</footer>
+<!-- /fuss -->
+
+<script src="/js/main.js?v=2026-11-16" defer></script>
+<script src="/js/track.js?v=2026-11-16" defer></script>
+</body>
+</html>

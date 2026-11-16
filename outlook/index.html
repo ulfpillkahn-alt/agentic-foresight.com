@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Outlook: Wie KI-Agenten Szenarien nach Lehrbuch bauen</title>
+    <meta name="description" content="Von Einflussfaktoren über Einflussmatrix und Wilson-Matrix zum Szenariorahmen: Wie der Outlook-Agent Szenarien baut und wo der Mensch entscheidet.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentic-foresight.com/outlook/">
+    <link rel="alternate" hreflang="de" href="https://agentic-foresight.com/outlook/">
+    <link rel="alternate" hreflang="en" href="https://agentic-foresight.com/en/outlook/">
+    <link rel="alternate" hreflang="x-default" href="https://agentic-foresight.com/outlook/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Agentic Foresight">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:url" content="https://agentic-foresight.com/outlook/">
+    <meta property="og:title" content="Outlook: Wie KI-Agenten Szenarien nach Lehrbuch bauen">
+    <meta property="og:description" content="Von Einflussfaktoren über Einflussmatrix und Wilson-Matrix zum Szenariorahmen: Wie der Outlook-Agent Szenarien baut und wo der Mensch entscheidet.">
+    <meta property="og:image" content="https://agentic-foresight.com/img/og-de.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agentic Foresight: die Agenten Scout, Outlook und Tunnel als Konstruktionsskizze">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:modified_time" content="2026-11-16">
+    <meta property="article:author" content="https://pillkahn.de/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@Ulf_Pillkahn">
+    <meta name="twitter:title" content="Outlook: Wie KI-Agenten Szenarien nach Lehrbuch bauen">
+    <meta name="twitter:description" content="Von Einflussfaktoren über Einflussmatrix und Wilson-Matrix zum Szenariorahmen: Wie der Outlook-Agent Szenarien baut und wo der Mensch entscheidet.">
+    <meta name="twitter:image" content="https://agentic-foresight.com/img/og-de.png">
+    <meta name="twitter:image:alt" content="Agentic Foresight: die Agenten Scout, Outlook und Tunnel als Konstruktionsskizze">
+    <meta name="theme-color" content="#141516">
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=2026-11-16">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Strukturdaten: generiert von pflege/seo.py nach dem Cluster-Standard -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pillkahn.de/#person",
+          "name": "Ulf Pillkahn",
+          "honorificPrefix": "Prof. Dr.",
+          "url": "https://pillkahn.de/",
+          "sameAs": [
+            "https://www.linkedin.com/in/prof-dr-ulf-pillkahn-1b7a6131/",
+            "https://x.com/Ulf_Pillkahn",
+            "https://www.youtube.com/@profandprompt"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://operation-zukunft.de/#organization",
+          "name": "Operation Zukunft",
+          "url": "https://operation-zukunft.de/",
+          "founder": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://agentic-foresight.com/#website",
+          "url": "https://agentic-foresight.com/",
+          "name": "Agentic Foresight",
+          "inLanguage": [
+            "de-DE",
+            "en"
+          ],
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://agentic-foresight.com/#term",
+          "name": "Agentic Foresight",
+          "description": "Agentic Foresight ist Foresight-Arbeit, in der spezialisierte KI-Agenten Signale suchen, Szenarien bauen und Strategien gegen diese Szenarien prüfen. Menschen stellen die Fragen, bewerten und entscheiden.",
+          "url": "https://agentic-foresight.com/",
+          "inLanguage": "de-DE",
+          "creator": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "subjectOf": {
+            "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "name": "Flipped Foresight",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7322758",
+          "sameAs": "https://doi.org/10.2139/ssrn.7322758",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://agentic-foresight.com/outlook/#webpage",
+          "url": "https://agentic-foresight.com/outlook/",
+          "name": "Outlook: Wie KI-Agenten Szenarien nach Lehrbuch bauen",
+          "description": "Von Einflussfaktoren über Einflussmatrix und Wilson-Matrix zum Szenariorahmen: Wie der Outlook-Agent Szenarien baut und wo der Mensch entscheidet.",
+          "inLanguage": "de-DE",
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "breadcrumb": {
+            "@id": "https://agentic-foresight.com/outlook/#breadcrumb"
+          },
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://agentic-foresight.com/outlook/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://agentic-foresight.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Outlook",
+              "item": "https://agentic-foresight.com/outlook/"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://agentic-foresight.com/outlook/#article",
+          "headline": "Wie bauen Agenten Szenarien nach Lehrbuch?",
+          "description": "Von Einflussfaktoren über Einflussmatrix und Wilson-Matrix zum Szenariorahmen: Wie der Outlook-Agent Szenarien baut und wo der Mensch entscheidet.",
+          "url": "https://agentic-foresight.com/outlook/",
+          "mainEntityOfPage": {
+            "@id": "https://agentic-foresight.com/outlook/#webpage"
+          },
+          "isPartOf": {
+            "@id": "https://agentic-foresight.com/#website"
+          },
+          "about": {
+            "@id": "https://agentic-foresight.com/#term"
+          },
+          "inLanguage": "de-DE",
+          "datePublished": "2026-11-16",
+          "dateModified": "2026-11-16",
+          "image": "https://agentic-foresight.com/img/og-de.png",
+          "author": {
+            "@id": "https://pillkahn.de/#person"
+          },
+          "publisher": {
+            "@id": "https://pillkahn.de/#person"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- kopf -->
+<header class="kopf">
+  <div class="huelle">
+    <a class="marke" href="/">Agentic<b>·</b>Foresight</a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/scout/">Scout</a>
+      <a href="/outlook/" aria-current="page">Outlook</a>
+      <a href="/tunnel/">Tunnel</a>
+      <a href="/faq/">FAQ</a>
+      <a class="sprache" href="/en/outlook/" hreflang="en" lang="en" data-track="sprache-en">EN</a>
+    </nav>
+  </div>
+</header>
+<!-- /kopf -->
+
+<main id="inhalt">
+
+<section class="seite-auftakt">
+  <div class="huelle">
+    <div>
+      <p class="label">Hebel 02 · Outlook</p>
+      <h1>Wie bauen Agenten <span>Szenarien nach Lehrbuch</span>?</h1>
+      <p class="antwort">Ein Outlook-Agent führt die ausgewählten Einflussfaktoren Schritt für Schritt durch den klassischen Szenarioprozess: Vernetzung, Bewertung nach Wirkung und Unsicherheit, Schlüsselfaktoren, Szenariorahmen, Ausformulierung. An den Weichen bestätigt der Mensch, bevor der Agent weiterarbeitet.</p>
+    </div>
+    <figure class="blatt">
+      <!-- figur:outlook:seite -->
+<picture>
+  <source type="image/avif" srcset="/img/outlook-560.avif 560w, /img/outlook-760.avif 760w, /img/outlook.avif 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <source type="image/webp" srcset="/img/outlook-560.webp 560w, /img/outlook-760.webp 760w, /img/outlook.webp 1000w" sizes="(max-width: 900px) 92vw, 470px">
+  <img src="/img/outlook.webp" alt="Skizze: Ein Roboter zeichnet am Zeichentisch eine Einflussmatrix; gestrichelte Pfeile führen zu vier Szenariotafeln im Szenariokreuz." width="1000" height="806" fetchpriority="high" decoding="async">
+</picture>
+<!-- /figur -->
+    </figure>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">01 / Ablauf</p>
+    <h2>Sieben Schritte vom Einflussfaktor zum Szenario</h2>
+    <ol class="schritte">
+      <li><div><b>Einflussfaktoren übernehmen</b><p>Ausgangspunkt sind die Faktoren, die der Mensch aus den Vorschlägen des Scouts ausgewählt hat, jeweils mit ihren Belegen.</p></div></li>
+      <li><div><b>Einflussmatrix</b><p>Jeder Faktor wird gegen jeden anderen bewertet: Wie stark wirkt A auf B? Aus Zeilen- und Spaltensummen ergeben sich Aktivsumme und Passivsumme. Sie zeigen, welche Faktoren das System treiben und welche getrieben werden. Das Verfahren geht auf den Papiercomputer von Frederic Vester zurück.</p></div></li>
+      <li><div><b>Wilson-Matrix</b><p>Die Faktoren werden nach Wirkung und Unsicherheit eingeordnet. Hohe Wirkung bei geringer Unsicherheit gehört in jedes Szenario; hohe Wirkung bei hoher Unsicherheit unterscheidet die Szenarien.</p></div></li>
+      <li><div><b>Schlüsselfaktoren bestimmen</b><p>Aus beiden Matrizen ergibt sich eine kleine Zahl von Schlüsselfaktoren mit großer Wirkung und offener Entwicklung.</p></div></li>
+      <li><div><b>Szenariorahmen aufspannen</b><p>Für jeden Schlüsselfaktor werden mögliche Ausprägungen beschrieben und zu stimmigen Kombinationen verbunden, etwa als Szenariokreuz aus zwei Achsen mit vier Feldern.</p></div></li>
+      <li><div><b>Szenarien ausformulieren</b><p>Für jedes Feld schreibt der Agent ein in sich stimmiges Zukunftsbild mit Annahmen, Entwicklungspfad und den Signalen, die heute schon darauf hindeuten.</p></div></li>
+      <li><div><b>Visualisieren</b><p>Die Szenarien werden als Bilder, Steckbriefe oder Vergleichstafeln aufbereitet, damit sie sich in Workshops und Gremien nebeneinanderlegen lassen.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">02 / Arbeitsteilung</p>
+    <h2>Was der Agent übernimmt, was der Mensch entscheidet</h2>
+    <div class="tabelle-huelle" role="region" aria-label="Arbeitsteilung Outlook" tabindex="0">
+      <table class="rollen">
+        <thead><tr><th scope="col">Schritt</th><th scope="col">Agent übernimmt</th><th scope="col" class="mensch">Mensch entscheidet</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Einflussmatrix</th><td>bewertet alle Paare und begründet jede Bewertung</td><td class="mensch">korrigiert Bewertungen, die er anders sieht</td></tr>
+          <tr><th scope="row">Wilson-Matrix</th><td>ordnet Faktoren nach Wirkung und Unsicherheit</td><td class="mensch">prüft die Einordnung der kritischen Faktoren</td></tr>
+          <tr><th scope="row">Schlüsselfaktoren</th><td>schlägt die Auswahl vor</td><td class="mensch">bestätigt die Schlüsselfaktoren</td></tr>
+          <tr><th scope="row">Szenariorahmen</th><td>bildet Ausprägungen und stimmige Kombinationen</td><td class="mensch">bestätigt den Rahmen</td></tr>
+          <tr><th scope="row">Ausformulierung</th><td>schreibt und visualisiert die Szenarien</td><td class="mensch">beurteilt Plausibilität und Relevanz für die Frage</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">03 / Grenzen</p>
+    <h2>Was Outlook nicht kann</h2>
+    <ul class="liste">
+      <li>Er erzeugt keine Zukunft, die nicht in seinen Faktoren angelegt ist. Was der Scout nicht gefunden hat, fehlt auch in den Szenarien.</li>
+      <li>Sprachmodelle neigen zum Wahrscheinlichen. Ohne ausdrückliche Gegensteuerung werden Szenarien glatter und ähnlicher, als sie sein sollten.</li>
+      <li>Stimmigkeit ist nicht Plausibilität. Ein in sich widerspruchsfreies Szenario kann trotzdem an der Wirklichkeit vorbeigehen.</li>
+      <li>Szenarien sind keine Prognosen. Der Agent kann keine Eintrittswahrscheinlichkeit liefern, die über eine Einschätzung hinausgeht.</li>
+    </ul>
+    <p class="nachsatz lese zweit">Methodische Grundlagen:</p>
+    <ul class="quellen">
+      <li>Vester, Frederic: Die Kunst vernetzt zu denken. Ideen und Werkzeuge für einen neuen Umgang mit Komplexität. Stuttgart: Deutsche Verlags-Anstalt, 1999.</li>
+      <li>Gausemeier, Jürgen; Fink, Alexander; Schlake, Oliver: Szenario-Management. Planen und Führen mit Szenarien. München: Hanser, 1995.</li>
+      <li>Ralston, Bill; Wilson, Ian: The Scenario-Planning Handbook. Developing Strategies in Uncertain Times. Mason (Ohio): Thomson South-Western, 2006.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="huelle">
+    <p class="label">04 / Im Ökosystem</p>
+    <h2>So sieht das in der Praxis aus</h2>
+    <div class="werkzeug">
+      <p>Pictures of Tomorrow fokussiert einen laufenden Signalstrom über Zeitraum, Branche, Region und Perspektive auf eine Frage und entfaltet daraus ein Szenariokreuz: zwei Achsen, vier stimmige Zukünfte, jede als Bild.</p>
+      <p><a href="https://www.picturesoftomorrow.com/">Vier bebilderte Zukunftsszenarien zu einer eigenen Frage</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="sektion">
+  <div class="huelle">
+    <div class="aufruf-knapp">
+      <p>Szenarioarbeit mit eigenen Agenten: Operation Zukunft baut und betreibt KI-Agenten für Innovation und Foresight.</p>
+      <a class="knopf" href="https://operation-zukunft.de/#angebote" data-track="cta-angebot">Agenten für die Foresight-Arbeit aufbauen →</a>
+    </div>
+    <nav class="weiterblaettern" aria-label="Weitere Hebel">
+      <a href="/scout/" data-track="hebel-scout">← Zurück: Scout findet Signale</a>
+      <a href="/tunnel/" data-track="hebel-tunnel">Weiter: Tunnel prüft die Strategie →</a>
+    </nav>
+    <p class="stand">Erstellt: 16.11.2026 · Zuletzt aktualisiert: 16.11.2026</p>
+  </div>
+</div>
+
+</main>
+
+<!-- fuss -->
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-zeile">
+      <div class="fuss-links">
+        <p class="cluster-hinweis">Ein Projekt von <a href="https://pillkahn.de/">Prof. Dr. Ulf Pillkahn</a></p>
+        <a href="/datenschutz/" data-track="datenschutz">Datenschutz</a>
+      </div>
+      <button class="impressum-toggle" type="button" aria-expanded="false" aria-controls="impressum" data-text="Impressum">Impressum ▼</button>
+    </div>
+    <div id="impressum" class="impressum">
+      <h2>Impressum</h2>
+      <p><strong>Angaben gemäß § 5 DDG</strong></p>
+      <p>Prof. Dr. Ulf Pillkahn<br>Maxhofstraße 28<br>81475 München</p>
+      <p><strong>Kontakt:</strong> <a href="mailto:info@operation-zukunft.de">info@operation-zukunft.de</a></p>
+      <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>Prof. Dr. Ulf Pillkahn</p>
+      <p><strong>Haftungsausschluss:</strong> Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter ist Prof. Dr. Ulf Pillkahn gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich, nach §§ 8 bis 10 DDG jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Für die Inhalte verlinkter externer Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+    </div>
+    <p class="copy">© 2026 Prof. Dr. Ulf Pillkahn · Operation Zukunft</p>
+  </div>
+</footer>
+<!-- /fuss -->
+
+<script src="/js/main.js?v=2026-11-16" defer></script>
+<script src="/js/track.js?v=2026-11-16" defer></script>
+</body>
+</html>

@@ -139,6 +139,29 @@ SEITEN = [
 # Ohne Paar: nur Fuß/Kopf/Cache-Buster, Kopfblock bleibt wie geschrieben
 NUR_RAHMEN = ["404.html", "stats.html"]
 
+# Illustrationen (Higgsfield, siehe bildstil.md). Breite x Höhe der großen Fassung.
+BILD_MASS = (1000, 806)
+BILD_ALT = {
+    "scout": {
+        "de": ("Skizze: Ein kleiner Roboter steht auf einem Gitterturm und blickt durch ein Fernrohr "
+               "in ein gestricheltes Suchfeld voller orangefarbener Signalpunkte."),
+        "en": ("Sketch: a small robot on a lattice tower looks through a telescope into a dashed "
+               "search field full of orange signal dots."),
+    },
+    "outlook": {
+        "de": ("Skizze: Ein Roboter zeichnet am Zeichentisch eine Einflussmatrix; gestrichelte Pfeile "
+               "führen zu vier Szenariotafeln im Szenariokreuz."),
+        "en": ("Sketch: a robot draws an impact matrix at a drafting table; dashed arrows lead to four "
+               "scenario panels arranged as a scenario cross."),
+    },
+    "tunnel": {
+        "de": ("Skizze: Windkanal mit orange leuchtendem Gebläse. Die Strömung umfließt ein "
+               "stufenförmiges Strategiemodell und wird dahinter turbulent; ein Roboter notiert die Messung."),
+        "en": ("Sketch: a wind tunnel with a glowing orange fan. The flow passes a stepped strategy "
+               "model and turns turbulent behind it; a robot takes notes."),
+    },
+}
+
 NAV = {
     "de": [("Scout", "/scout/"), ("Outlook", "/outlook/"), ("Tunnel", "/tunnel/"), ("FAQ", "/faq/")],
     "en": [("Scout", "/en/scout/"), ("Outlook", "/en/outlook/"), ("Tunnel", "/en/tunnel/"), ("FAQ", "/en/faq/")],
@@ -315,12 +338,29 @@ def fuss_html(sp):
             '  </div>\n</footer>')
 
 
-def figuren(t):
+def figuren(t, sp):
+    """<!-- figur:NAME[:seite] --> … <!-- /figur -->: Bild als <picture> (AVIF, WebP)."""
+    w, h = BILD_MASS
     def ein(m):
-        name = m.group(1)
-        svg = open(os.path.join(BASIS, "pflege", "figuren", name + ".svg"), encoding="utf-8").read().strip()
-        return f"<!-- figur:{name} -->\n{svg}\n<!-- /figur -->"
-    return re.sub(r"<!-- figur:([a-z]+) -->.*?<!-- /figur -->", ein, t, flags=re.S)
+        name, kontext = m.group(1), m.group(2) or "kette"
+        if kontext == "seite":
+            alt = BILD_ALT[name][sp]
+            sizes = "(max-width: 900px) 92vw, 470px"
+            laden = 'fetchpriority="high"'
+        else:
+            alt = ""        # in der Kette trägt der Linktext den Namen; Bild ist Schmuck
+            sizes = "(max-width: 900px) 90vw, 330px"
+            # Kette liegt am Desktop in der ersten Ansicht; Scout ist mobil das LCP-Element
+            laden = 'fetchpriority="high"' if name == "scout" else 'loading="eager"'
+        quellen = "\n".join(
+            f'  <source type="image/{fmt}" srcset="/img/{name}-560.{fmt} 560w, /img/{name}-760.{fmt} 760w, /img/{name}.{fmt} {w}w" sizes="{sizes}">'
+            for fmt in ("avif", "webp"))
+        bild = (f"<picture>\n{quellen}\n"
+                f'  <img src="/img/{name}.webp" alt="{e(alt)}" width="{w}" height="{h}" {laden} decoding="async">\n'
+                "</picture>")
+        marke = name + (":" + m.group(2) if m.group(2) else "")
+        return f"<!-- figur:{marke} -->\n{bild}\n<!-- /figur -->"
+    return re.sub(r"<!-- figur:([a-z]+)(?::([a-z]+))? -->.*?<!-- /figur -->", ein, t, flags=re.S)
 
 
 def rahmen(t, sp, aktuell, gegen):
@@ -328,7 +368,7 @@ def rahmen(t, sp, aktuell, gegen):
                lambda m: "<!-- kopf -->\n" + kopf_html(sp, aktuell, gegen) + "\n<!-- /kopf -->", t, flags=re.S)
     t = re.sub(r"<!-- fuss -->.*?<!-- /fuss -->",
                lambda m: "<!-- fuss -->\n" + fuss_html(sp) + "\n<!-- /fuss -->", t, flags=re.S)
-    t = figuren(t)
+    t = figuren(t, sp)
     t = re.sub(r'((?:style\.css|main\.js|track\.js|stats\.js))\?v=[0-9a-z-]+', r'\1?v=' + VERSION, t)
     return t
 

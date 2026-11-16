@@ -105,7 +105,7 @@ p { margin: 0 0 1rem; }
 .knoten { display: block; text-decoration: none; color: var(--kreide); padding: 1rem 1rem 1.2rem;
   border: 1px solid transparent; position: relative; }
 .knoten:hover { border-color: var(--linie); }
-.knoten svg { width: 100%; height: auto; aspect-ratio: 260 / 220; }
+.knoten img { width: 100%; height: auto; border: 1px solid var(--linie); }
 .knoten-name { display: flex; align-items: baseline; gap: .7rem; margin-top: .6rem;
   font: 600 1.25rem/1.2 var(--f-titel); }
 .knoten-name small { font: 500 .72rem/1 var(--f-mono); letter-spacing: .14em; color: var(--orange); }
@@ -115,27 +115,8 @@ p { margin: 0 0 1rem; }
   vector-effect: non-scaling-stroke; }
 .verbinder .fluss { stroke-dasharray: 5 7; animation: fluss 1.4s linear infinite; }
 
-/* ---------- 8. Figuren ---------- */
-.fig { fill: none; stroke: var(--kreide); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.fig * { vector-effect: non-scaling-stroke; }
-.fig .k { stroke-opacity: .32; stroke-dasharray: 2 5; }
-.fig .d { stroke-opacity: .45; }
-.fig .o { stroke: var(--orange); }
-.fig .k.o { stroke-opacity: .7; }
-.fig .of { fill: var(--orange); stroke: none; }
-.fig .mx { opacity: .85; }
-.fig .ring { stroke-opacity: .6; }
-/* Bewegung: nur Startseite (.kette), überall aus bei reduced motion */
-.kette .fig .puls { animation: puls 2.6s ease-in-out infinite; }
-.kette .fig .p2 { animation-delay: .7s; } .kette .fig .p3 { animation-delay: 1.3s; } .kette .fig .p4 { animation-delay: 1.9s; }
-.kette .fig .ring { transform-box: fill-box; transform-origin: center; animation: ring 2.6s ease-out infinite; }
-.kette .fig .str { stroke-dasharray: 14 6; animation: fluss 2.2s linear infinite; }
-.kette .fig .s2 { animation-duration: 2.8s; } .kette .fig .s3 { animation-duration: 1.8s; }
-.kette .fig .mx { animation: puls 3.4s ease-in-out infinite; }
-.kette .fig .m2 { animation-delay: 1.1s; } .kette .fig .m3 { animation-delay: 2.2s; }
+/* ---------- 8. Bewegung (nur Verbinder der Kette, CSS only) ---------- */
 @keyframes fluss { to { stroke-dashoffset: -24; } }
-@keyframes puls { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
-@keyframes ring { 0% { transform: scale(.4); opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
@@ -245,3 +226,74 @@ p { margin: 0 0 1rem; }
   .band { grid-template-columns: 1fr; gap: .5rem; }
   .kopf .huelle { padding-block: .9rem; }
 }
+
+/* ---------- 13. Hebelseiten ---------- */
+.seite-auftakt { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2.5rem, 5vw, 4rem); }
+.seite-auftakt .huelle { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.seite-auftakt h1 { font-size: clamp(2rem, 4.6vw, 3.3rem); font-weight: 700; line-height: 1.05; margin-bottom: 1.4rem; }
+.seite-auftakt h1 span { color: var(--orange); }
+.antwort { font-size: clamp(1.1rem, 1.8vw, 1.3rem); line-height: 1.55; margin: 0; }
+.blatt { margin: 0; border: 1px solid var(--linie); background: var(--flaeche); padding: 8px; position: relative; }
+.blatt::before, .blatt::after { content: ""; position: absolute; width: 12px; height: 12px; border-color: var(--orange); border-style: solid; }
+.blatt::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.blatt::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+.blatt img { width: 100%; height: auto; }
+.blatt figcaption { font: 400 .75rem/1.4 var(--f-mono); color: var(--kreide-3); letter-spacing: .04em; padding: .6rem .2rem .1rem; }
+.schritte { list-style: none; margin: 2rem 0 0; padding: 0; counter-reset: s; border-top: 1px solid var(--linie); max-width: 52rem; }
+.schritte li { counter-increment: s; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 1rem;
+  padding: 1.2rem 0; border-bottom: 1px solid var(--linie); }
+.schritte li::before { content: counter(s, decimal-leading-zero); font: 500 .85rem/1.6 var(--f-mono); color: var(--orange); letter-spacing: .1em; }
+.schritte b { display: block; font: 600 1.05rem/1.4 var(--f-titel); margin-bottom: .2rem; }
+.schritte p { margin: 0; color: var(--kreide-2); }
+.rollen { width: 100%; border-collapse: collapse; min-width: 600px; font-size: .97rem; }
+.rollen th, .rollen td { text-align: left; vertical-align: top; padding: 1rem 1rem 1rem 0; border-bottom: 1px solid var(--linie); }
+.rollen thead th { font: 500 .78rem/1.3 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--kreide-2); }
+.rollen thead .mensch { color: var(--orange); }
+.rollen tbody th { font: 600 .95rem/1.4 var(--f-titel); width: 22%; }
+.rollen td { color: var(--kreide-2); width: 39%; }
+.rollen td.mensch { color: var(--kreide); border-left: 2px solid var(--orange); padding-left: 1rem; }
+.liste { margin: 0; padding-left: 1.2rem; color: var(--kreide-2); max-width: var(--lese); }
+.liste li { margin-bottom: .6rem; }
+.liste li::marker { color: var(--orange); }
+.werkzeug { border: 1px solid var(--linie); background: var(--flaeche); padding: clamp(1.4rem, 3vw, 2.2rem); max-width: 52rem; }
+.werkzeug p { color: var(--kreide-2); }
+.werkzeug p:last-child { margin: 0; }
+.werkzeug a { font-weight: 600; }
+.quellen { font-size: .9rem; color: var(--kreide-3); max-width: 52rem; margin: 1.6rem 0 0; padding-left: 1.2rem; }
+.quellen li { margin-bottom: .4rem; }
+.weiterblaettern { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--linie); }
+.weiterblaettern a { font: 500 .85rem/1.4 var(--f-mono); letter-spacing: .06em; text-decoration: none; }
+.aufruf-knapp { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem 2rem;
+  border: 1px solid var(--linie); background: var(--flaeche); padding: 1.6rem clamp(1.2rem, 3vw, 2rem); }
+.aufruf-knapp p { margin: 0; max-width: 36rem; color: var(--kreide-2); }
+@media (max-width: 900px) {
+  .seite-auftakt .huelle { grid-template-columns: 1fr; }
+}
+
+/* ---------- 14. FAQ ---------- */
+.faq { border-bottom: 1px solid var(--linie); max-width: 52rem; }
+.faq:first-of-type { border-top: 1px solid var(--linie); }
+.faq summary { cursor: pointer; list-style: none; padding: 1.2rem 2.4rem 1.2rem 0; position: relative;
+  font: 600 1.1rem/1.4 var(--f-titel); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: .2rem; top: 1.05rem; font: 400 1.4rem/1 var(--f-mono); color: var(--orange); }
+.faq[open] summary::after { content: "–"; }
+.faq .antwort-faq { padding: 0 0 1.3rem; color: var(--kreide-2); }
+.faq .antwort-faq p:first-child { color: var(--kreide); font-weight: 500; }
+.glossar { display: grid; grid-template-columns: 14rem minmax(0, 1fr); margin: 2rem 0 0; border-top: 1px solid var(--linie); max-width: 60rem; }
+.glossar dt, .glossar dd { padding: 1rem 0; border-bottom: 1px solid var(--linie); margin: 0; }
+.glossar dt { font: 600 1rem/1.4 var(--f-titel); padding-right: 1.5rem; }
+.glossar dd { color: var(--kreide-2); }
+@media (max-width: 640px) {
+  .glossar { grid-template-columns: 1fr; }
+  .glossar dt { border-bottom: 0; padding-bottom: .2rem; }
+  .glossar dd { padding-top: 0; }
+}
+
+/* ---------- 15. Rechtstexte ---------- */
+.recht { max-width: 46rem; }
+.recht h2 { font-size: 1.3rem; margin: 2.4rem 0 .8rem; max-width: none; }
+.recht p, .recht li { color: var(--kreide-2); }
+.recht ul { padding-left: 1.2rem; }
+.hinweis { border-left: 2px solid var(--orange); padding: .6rem 0 .6rem 1rem; color: var(--kreide); }
+.seite-auftakt .huelle.einfach { display: block; }

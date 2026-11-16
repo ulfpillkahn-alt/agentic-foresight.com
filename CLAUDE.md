@@ -37,10 +37,10 @@ python3 pflege/seo.py
 
 Erzeugt Kopf (title, description, canonical, hreflang, OG, Twitter), den einen
 JSON-LD-`@graph`, Navigation (`<!-- kopf -->`), Fuß mit Impressum (`<!-- fuss -->`),
-setzt die Figuren aus `pflege/figuren/*.svg` ein (`<!-- figur:NAME -->`) und den
+setzt die Illustrationen als `<picture>` ein (`<!-- figur:NAME -->`, Alt-Texte in `BILD_ALT`) und den
 Cache-Buster `?v=`. Wiederholbar, bricht bei Title > 60 / Description > 155 ab.
-**Kopf, JSON-LD, Navigation, Fuß und Figuren nie im HTML von Hand ändern** —
-Skript bzw. SVG-Datei anpassen und Skript laufen lassen. Titles/Descriptions
+**Kopf, JSON-LD, Navigation, Fuß und Bildeinbindung nie im HTML von Hand ändern** —
+Skript anpassen und Skript laufen lassen. Titles/Descriptions
 stehen in `SEITEN` im Skript. Bei CSS/JS-Änderung `VERSION` hochzählen.
 
 Gestaltung: `designsystem.md`. Bildprompts und Job-IDs: `bildstil.md`.

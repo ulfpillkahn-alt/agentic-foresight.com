@@ -61,19 +61,18 @@ Eingebunden sind genau drei variable WOFF2-Dateien (Latin), selbst gehostet,
 | About | `.about` | Porträt 280 px, Kernsatz, drei Links auf pillkahn.de |
 | Fuß | `.fuss` | Cluster-Hinweis, Datenschutz, Impressum-Toggle |
 
-## 5. Figuren (inline SVG)
+## 5. Illustrationen
 
-- Quelle: `pflege/figuren/*.svg`; `pflege/seo.py` setzt sie zwischen
-  `<!-- figur:NAME -->` und `<!-- /figur -->` ein. Nie im HTML von Hand ändern.
-- Einheitlicher Strich: 1,6 px, `vector-effect: non-scaling-stroke`, runde Enden.
-  Groß auf der Startseite und klein auf den Hebelseiten bleibt die Linie gleich stark.
-- Kreide für Konstruktion und Figuren, Orange nur für Signale, Linse des
-  Agenten, Fokus (Matrixfelder, Windkanal-Turbulenz).
-- Die Agenten tragen dieselbe Gestalt: Kopf mit orangem Auge, Antenne, Rumpf.
-- Bewegung nur CSS (gestrichelter Fluss, pulsierende Signale), bei
-  `prefers-reduced-motion: reduce` vollständig aus.
+- Seit 16.11.2026 (Freigabe Prof.) Higgsfield-Illustrationen statt der ersten SVG-Figuren:
+  Scout, Outlook, Tunnel als Kreide-Konstruktionsskizzen, Prompts und Job-IDs in `bildstil.md`.
+- Dateien `img/NAME.{avif,webp}` (1000 × 806) plus `-760` und `-560`; `pflege/seo.py` setzt sie
+  zwischen `<!-- figur:NAME -->` (Kette, Startseite) bzw. `<!-- figur:NAME:seite -->` (Hebelseite)
+  als `<picture>` ein, Alt-Texte stehen in `BILD_ALT` im Skript.
+- Rahmen `.blatt` mit orangefarbenen Passermarken; in der Kette ein Haarlinienrahmen.
+- Bewegung nur CSS: der gestrichelte Fluss der Verbinder Scout → Outlook → Tunnel,
+  bei `prefers-reduced-motion: reduce` aus.
 
 ## 6. Bilder
 
 AVIF/WebP mit festen Maßen, unterhalb der ersten Ansicht `loading="lazy"`.
-OG-Bild 1200 × 630 je Sprache, aus SVG gerendert (siehe `bildstil.md`).
+OG-Bild 1200 × 630 je Sprache (`img/og-de.png`, `img/og-en.png`), mit Pillow aus den drei Illustrationen und den Seitenschriften gesetzt.
