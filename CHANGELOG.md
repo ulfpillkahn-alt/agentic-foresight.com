@@ -1,5 +1,10 @@
 # Changelog agentic-foresight.com
 
+## 21.11.2026 — IndexNow-Schlüsseldatei
+
+- `ca3edc18a4765a429a3d8bb2b720b140.txt` im Wurzelverzeichnis (Inhalt genau der Schlüssel, für Bing/IndexNow). Erstmeldung der Sitemap mit indexnow.sh (Ordner Meine Ablage).
+  Die Datei nicht löschen oder umbenennen, sonst lehnt IndexNow künftige Meldungen ab (403).
+
 ## 16.11.2026 — Livegang
 
 **Seiten (DE/EN, je 6):** Start, Scout, Outlook, Tunnel, FAQ, Datenschutz/Privacy; dazu
