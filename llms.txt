@@ -29,6 +29,7 @@ A project by Prof. Dr. Ulf Pillkahn. The person: https://pillkahn.de/ — the of
 ## Angebot / Offer
 
 - [Operation Zukunft](https://operation-zukunft.de/#angebote): KI-Agenten für Innovation und Foresight, Aufbau als Projekt, Betrieb als monatlicher Service
+- [Foresight mit KI-Agenten](https://operation-zukunft.de/foresight-mit-ki-agenten/): Was KI-Agenten im Foresight-Prozess übernehmen, was beim Menschen bleibt und wie der Einstieg gelingt.
 
 ## Kontakt / Contact
 
